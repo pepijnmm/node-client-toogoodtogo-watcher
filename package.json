@@ -3,6 +3,10 @@
   "version": "2.0.2",
   "description": "Node.js cli tool for monitoring your favorite TooGoodToGo businesses.",
   "main": "index.js",
+  "scripts": {
+    "start": "node index.js watch",
+    "config": "node index.js config"
+  },
   "keywords": [
     "TooGoodToGo",
     "notifications",
@@ -19,10 +23,6 @@
     "url": "https://github.com/marklagendijk/node-toogoodtogo-watcher/issues"
   },
   "homepage": "https://github.com/marklagendijk/node-toogoodtogo-watcher#readme",
-  "preferGlobal": true,
-  "bin": {
-    "toogoodtogo-watcher": "index.js"
-  },
   "dependencies": {
     "conf": "^6.2.3",
     "editor": "^1.0.0",

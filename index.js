@@ -13,20 +13,24 @@ const argv = require('yargs')
     .argv;
 
 switch (argv._[0]) {
-case 'config':
-    editConfig();
-    break;
+  case 'config':
+      editConfig();
+      break;
 
-case 'config-reset':
-    resetConfig();
-    break;
+  case 'config-reset':
+      resetConfig();
+      break;
 
-case 'config-path':
-    configPath();
-    break;
+  case 'config-path':
+      configPath();
+      break;
 
-case 'watch':
-    pollFavoriteBusinesses()
-        .subscribe(businesses => notifyIfChanged(businesses), console.error);
-    break;
+  case 'watch':
+      pollFavoriteBusinesses()
+          .subscribe(businesses => notifyIfChanged(businesses), console.error);
+          break;
+
+  default:
+      console.log("argument does not exist.");
+      break;
 }
